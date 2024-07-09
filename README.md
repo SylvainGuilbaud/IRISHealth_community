@@ -13,7 +13,7 @@
 * [stop.sh](./stop.sh) - removes all containers
 
 ## configure.sh
-* [iris/configure.sh](./iris/configure.sh) - configures the IRIS Health container's CSPConfigName
+* [iris/configure.sh](./IRIS/configure.sh) - configures the IRIS Health container's CSPConfigName
 
 ## IRIS Health Management Portal
 
