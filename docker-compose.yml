@@ -13,6 +13,8 @@ services:
     ports:
       - 19724:1972
       - 8004:52773
+    environment:
+      - TINI_SUBREAPER=1
 
   iris-cd:
     image: ${IMAGE_IRIS_CD} # CONTINUOUS DELIVERY
@@ -27,6 +29,8 @@ services:
     ports:
       - 19725:1972
       - 8005:52773
+    environment:
+      - TINI_SUBREAPER=1
 
   iris-preview:
     image: ${IMAGE_IRIS_PREVIEW} # DEVELOPER PREVIEW
@@ -41,3 +45,5 @@ services:
     ports:
       - 19726:1972
       - 8006:52773
+    environment:
+      - TINI_SUBREAPER=1
