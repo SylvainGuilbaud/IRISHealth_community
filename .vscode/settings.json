@@ -5,7 +5,7 @@
             "internalPort": 52773,
             "service": "iris-em"
         },
-        "active": false,
+        "active": true,
         "links": {
             "EM Management Portal": "http://${host}:8004/csp/sys/UtilHome.csp",
             "CD Management Portal": "http://${host}:8005/csp/sys/UtilHome.csp",
