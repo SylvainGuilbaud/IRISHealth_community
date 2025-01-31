@@ -24,7 +24,7 @@ services:
       # - TZ=Europe/Paris
 
   iris-cd:
-    image: ${IMAGE_IRIS_CD} # CONTINUOUS DELIVERY
+    image: ${IMAGE_IRIS_CD} # CONTINUOUS_DELIVERY
     init: true
     container_name: ${CONTAINER_IRIS_CD}
     hostname: ${CONTAINER_IRIS_CD}
@@ -48,7 +48,7 @@ services:
       - TZ=Europe/Paris
 
   iris-preview:
-    image: ${IMAGE_IRIS_PREVIEW} # DEVELOPER PREVIEW
+    image: ${IMAGE_IRIS_PREVIEW} # DEVELOPER_PREVIEW
     init: true
     container_name: ${CONTAINER_IRIS_PREVIEW}
     hostname: ${CONTAINER_IRIS_PREVIEW}
