@@ -15,6 +15,7 @@ services:
       - 19724:1972
       - 8004:52773
     environment:
+      - ISC_CPF_MERGE_FILE=/IRIS/merge.cpf
       - TINI_SUBREAPER=1
       # - TZ=Europe/Paris
 
@@ -34,6 +35,7 @@ services:
       - 19725:1972
       - 8005:52773
     environment:
+      - ISC_CPF_MERGE_FILE=/IRIS/merge.cpf
       - TINI_SUBREAPER=1
       - TZ=Europe/Paris
 
@@ -53,5 +55,6 @@ services:
       - 19726:1972
       - 8006:52773
     environment:
+      - ISC_CPF_MERGE_FILE=/IRIS/merge.cpf
       - TINI_SUBREAPER=1
       - TZ=Europe/Paris
