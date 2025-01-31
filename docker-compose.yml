@@ -16,7 +16,7 @@ services:
       - 8004:52773
     environment:
       - TINI_SUBREAPER=1
-      - TZ=Europe/Paris
+      # - TZ=Europe/Paris
 
   iris-cd:
     image: ${IMAGE_IRIS_CD} # CONTINUOUS DELIVERY
