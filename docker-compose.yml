@@ -5,46 +5,46 @@ services:
     container_name: ${CONTAINER_IRIS_EM}
     hostname: ${CONTAINER_IRIS_EM}
     volumes:
-    - type: bind
-      source: ./IRIS
-      target: /IRIS
-    - type: bind
-      source: ./volumes
-      target: /volumes
+    # - type: bind
+    #   source: ./IRIS
+    #   target: /IRIS
+    # - type: bind
+    #   source: ./volumes
+    #   target: /volumes
     - "/etc/timezone:/etc/timezone:ro"
     - "/etc/localtime:/etc/localtime:ro"
-    command: -a /IRIS/configure.sh
+    # command: -a /IRIS/configure.sh
     ports:
       - 19724:1972
-      - 8004:52773
+      - 8014:52773
     environment:
       # - ISC_DATA_DIRECTORY=/volumes/${EXTENDED_MAINTENANCE}
-      - ISC_CPF_MERGE_FILE=/IRIS/merge.cpf
-      - TINI_SUBREAPER=1
-      # - TZ=Europe/Paris
+      # - ISC_CPF_MERGE_FILE=/IRIS/merge.cpf
+      # - TINI_SUBREAPER=1
+      - TZ=Europe/Paris
 
   iris-cd:
     image: ${IMAGE_IRIS_CD} # CONTINUOUS_DELIVERY
     init: true
     container_name: ${CONTAINER_IRIS_CD}
     hostname: ${CONTAINER_IRIS_CD}
-    volumes:
-    - type: bind
-      source: ./IRIS
-      target: /IRIS
-    - type: bind
-      source: ./volumes
-      target: /volumes
+    # volumes:
+    # - type: bind
+    #   source: ./IRIS
+    #   target: /IRIS
+    # - type: bind
+    #   source: ./volumes
+    #   target: /volumes
     # - "/etc/timezone:/etc/timezone:ro"
     # - "/etc/localtime:/etc/localtime:ro"
-    command: -a /IRIS/configure.sh
+    # command: -a /IRIS/configure.sh
     ports:
       - 19725:1972
       - 8005:52773
     environment:
       # - ISC_DATA_DIRECTORY=/volumes/${CONTINUOUS_DELIVERY}
-      - ISC_CPF_MERGE_FILE=/IRIS/merge.cpf
-      - TINI_SUBREAPER=1
+      # - ISC_CPF_MERGE_FILE=/IRIS/merge.cpf
+      # - TINI_SUBREAPER=1
       - TZ=Europe/Paris
 
   iris-preview:
@@ -52,21 +52,21 @@ services:
     init: true
     container_name: ${CONTAINER_IRIS_PREVIEW}
     hostname: ${CONTAINER_IRIS_PREVIEW}
-    volumes:
-    - type: bind
-      source: ./IRIS
-      target: /IRIS
-    - type: bind
-      source: ./volumes
-      target: /volumes
+    # volumes:
+    # - type: bind
+    #   source: ./IRIS
+    #   target: /IRIS
+    # - type: bind
+    #   source: ./volumes
+    #   target: /volumes
     # - "/etc/timezone:/etc/timezone:ro"
     # - "/etc/localtime:/etc/localtime:ro"
-    command: -a /IRIS/configure.sh
+    # command: -a /IRIS/configure.sh
     ports:
       - 19726:1972
       - 8006:52773
     environment:
       # - ISC_DATA_DIRECTORY=/volumes/${DEVELOPER_PREVIEW}
-      - ISC_CPF_MERGE_FILE=/IRIS/merge.cpf
-      - TINI_SUBREAPER=1
+      # - ISC_CPF_MERGE_FILE=/IRIS/merge.cpf
+      # - TINI_SUBREAPER=1
       - TZ=Europe/Paris
